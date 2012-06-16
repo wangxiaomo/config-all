@@ -3,5 +3,5 @@
 use strict;
 use warnings;
 
-`ln -s vimrc ~/.vimrc`
-`ln -s tmux.conf ~/.tmux.conf`
+`ln -s vimrc ~/.vimrc`;
+`ln -s tmux.conf ~/.tmux.conf`;
