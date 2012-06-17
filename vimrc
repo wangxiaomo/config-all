@@ -49,16 +49,29 @@ set autowrite		" Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
 
-" xiaomo code here
-set number
-set tabstop=4
-set expandtab
-set guifont=Lucida\ Console
-:imap <s-tab> <c-p>
-set fencs=utf-8,cp936
-
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+" xiaomo code here
+set number
+set tabstop=4
+set expandtab
+set fencs=utf-8,cp936
+
+" For vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'bash-support.vim'
+Bundle 'perl-support.vim'
+" Python Import 插件.默认开启
+Bundle 'python-imports.vim'
+let g:PythonAutoAddImports = 1
+" NERDComments 插件.快捷键 c-c
+
+
+filetype plugin on
