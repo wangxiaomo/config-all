@@ -72,6 +72,14 @@ Bundle 'perl-support.vim'
 Bundle 'python-imports.vim'
 let g:PythonAutoAddImports = 1
 " NERDComments 插件.快捷键 c-c
-
+map <c-c> \c<SPACE>
+imap <c-c> <ESC>\c<SPACE>i
+" MatchIndent. 强制转化文件 indent 到指定 indent
+Bundle 'matchindent.vim'
+" Mark.vim
+map m \m
+" NerdTree
+map <c-f> :NERDTreeToggle<CR>
+imap <c-f> <ESC>:NERDTreeToggle<CR>
 
 filetype plugin on
