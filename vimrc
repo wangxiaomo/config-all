@@ -59,6 +59,7 @@ set number
 set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
+imap <s-tab> <c-p>
 
 " For vundle
 set nocompatible
