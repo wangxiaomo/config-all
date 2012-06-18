@@ -12,4 +12,4 @@ export LC_ALL='zh_CN.UTF-8'
 export XMODIFIERS="@im=fcitx"
 
 alias ls='ls -F --color'
-#TODO:alias scrot
+alias scrot="scrot -s '/home/xiaomo/images/%Y-%m-%d_%H:%M:%S.png'"
