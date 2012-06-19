@@ -60,6 +60,10 @@ set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
 imap <s-tab> <c-p>
+map <c-d> :tabclose<CR>
+if has("gui_running")
+  colorscheme pablo
+endif
 
 " For vundle
 set nocompatible
