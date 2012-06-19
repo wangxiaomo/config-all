@@ -27,9 +27,9 @@ endif
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
+if has("autocmd")
+ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
@@ -86,5 +86,8 @@ map m \m
 " NerdTree
 map <c-f> :NERDTreeToggle<CR>
 imap <c-f> <ESC>:NERDTreeToggle<CR>
+" gsession.vim
+let g:autoload_session = 1
+let g:autosave_session = 1
 
 filetype plugin on
