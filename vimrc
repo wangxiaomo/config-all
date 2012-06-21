@@ -55,6 +55,8 @@ if filereadable("/etc/vim/vimrc.local")
 endif
 
 " xiaomo code here
+set shiftwidth=4
+set autoindent
 set number
 set tabstop=4
 set expandtab
