@@ -3,6 +3,6 @@
 use strict;
 use warnings;
 
-`rm ~/.vimrc && ln -s vimrc ~/.vimrc`;
-`rm ~/.tmux.conf && ln -s tmux.conf ~/.tmux.conf`;
-`rm ~/.bashrc && ln -s bash.bashrc ~/.bashrc`;
+`rm -f ~/.vimrc && cp vimrc ~/.vimrc`;
+`rm -f ~/.tmux.conf && cp tmux.conf ~/.tmux.conf`;
+`rm -f ~/.bashrc && cp bash.bashrc ~/.bashrc`;
