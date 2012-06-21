@@ -9,7 +9,9 @@ fi
 export LANG='zh_CN.UTF-8'
 export LANGUAGE='zh_CN.UTF-8'
 export LC_ALL='zh_CN.UTF-8'
-export XMODIFIERS="@im=fcitx"
+export XMODIFIERS="@im=ibus"
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
 
 alias ls='ls -F --color'
 alias scrot="scrot -s '/home/xiaomo/images/%Y-%m-%d_%H:%M:%S.png'"
