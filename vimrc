@@ -90,3 +90,23 @@ let g:autoload_session = 1
 let g:autosave_session = 1
 
 filetype plugin on
+
+" F5 to run current script [ default is python ]
+nmap <F5> :call Run_cnt_script()<CR>
+function Run_cnt_script()
+  let script_name = expand("%")
+  let script_ext  = expand("%:e")
+  if (script_name == '')
+    echohl WarningMsg | echo "Fail to Run." | echohl None
+    return
+  endif
+  if (script_ext == 'py')
+    execute "!python " . script_name
+    return
+  endif
+  if (script_ext == 'pl')
+    execute "!perl " . script_name
+    return
+  endif
+  echohl WarningMsg | echo "Unrecognized Ext!" | echohl None
+endfunction
