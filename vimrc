@@ -23,7 +23,7 @@ endif
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-"set background=dark
+set background=dark
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -63,9 +63,6 @@ set expandtab
 set fencs=utf-8,cp936
 imap <s-tab> <c-p>
 map <c-d> :tabclose<CR>
-if has("gui_running")
-  colorscheme pablo
-endif
 
 " For vundle
 set nocompatible
