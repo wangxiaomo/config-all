@@ -11,3 +11,4 @@ aptitude install vim vim-gtk vim-gnome git
 
 # upgrade the system
 aptitude upgrade
+aptitude install python-setuptools ipython irssi geany openssh-server subversion openbox fvwm
