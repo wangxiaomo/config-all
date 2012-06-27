@@ -56,6 +56,10 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+if has("gui_runing")
+  colorscheme pablo
+endif
+
 " xiaomo code here
 set shiftwidth=4
 set autoindent
