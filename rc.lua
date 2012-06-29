@@ -15,7 +15,7 @@ require("debian.menu")
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "konsole"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -49,7 +49,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "  This is not About Life  ", "  This is not About IT  ", "  This is not About Me  " }, s, layouts[1])
+    tags[s] = awful.tag({ " INTERNET ", "| TERMINAL ", "| VIM ", "| CHAT " }, s, layouts[2])
 end
 -- }}}
 
@@ -75,8 +75,6 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
-
--- Create a systray
 mysystray = widget({ type = "systray" })
 
 -- Create a wibox for each screen and add it
@@ -341,4 +339,6 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- {{{ xiaomo's config
 -- auto startup
 awful.util.spawn_with_shell("ibus-daemon -d")
+awful.util.spawn_with_shell("nm-applet")
+awful.util.spawn_with_shell("xsetbg /home/xiaomo/bg.jpg")
 -- }}}
