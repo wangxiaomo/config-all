@@ -11,7 +11,7 @@ aptitude install vim vim-gtk vim-gnome git tmux
 
 # upgrade the system
 aptitude upgrade
-aptitude install build-essential python-setuptools htop ipython irssi openssh-server subversion gtk-chtheme qt3-qtconfig qt4-qtconfig synergy awesome xloadimage xchat
+aptitude install build-essential python-setuptools htop ipython irssi openssh-server subversion gtk-chtheme qt3-qtconfig qt4-qtconfig synergy awesome xloadimage xchat smplayer vlc
 
 # install latex
 aptitude install texlive-latex* latex-cjk-all
