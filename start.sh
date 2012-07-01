@@ -7,11 +7,14 @@ apt-get update
 update-manager -d
 apt-get install aptitude
 aptitude update
-aptitude install vim vim-gtk vim-gnome git tmux
+aptitude install vim vim-gtk vim-gnome git tmux openssh-server
 
 # upgrade the system
 aptitude upgrade
-aptitude install build-essential python-setuptools htop ipython irssi openssh-server subversion gtk-chtheme qt3-qtconfig qt4-qtconfig synergy awesome xloadimage xchat smplayer vlc
+aptitude install build-essential htop irssi subversion gtk-chtheme qt3-qtconfig qt4-qtconfig synergy awesome xloadimage xchat smplayer vlc
 
 # install latex
 aptitude install texlive-latex* latex-cjk-all
+
+# install python tools
+aptitude install python-pip python-setuptools ipython
