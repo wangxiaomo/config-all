@@ -14,6 +14,7 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 
 alias ls='ls -F --color'
+alias vi='vim'
 alias grep='grep --color -i'
 alias scrot="scrot -s '/home/xiaomo/images/%Y-%m-%d_%H:%M:%S.png'"
 
