@@ -21,3 +21,5 @@ export PS1='\n\n\e[36;40m\u\e[0m \e[34;40m@\e[0m \e[33;40m\h\e[0m in \w  \t\n\$-
 export EDITOR='vim'
 export VISUAL='vim'
 export DISPLAY=:0.1
+
+exec /bin/zsh
