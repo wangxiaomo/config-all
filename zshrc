@@ -41,5 +41,12 @@ alias as='aptitude search'
 alias ai='sudo aptitude install'
 alias vpn='sudo /etc/init.d/openvpn start'
 
-export VISUAL='vim'
 export DISPLAY=:0.0
+export VISUAL='vim'
+export EDITOR='vim'
+export LANG='zh_CN.UTF-8'
+export LANGUAGE='zh_CN.UTF-8'
+export LC_ALL='zh_CN.UTF-8'
+export XMODIFIERS="@im=ibus"
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
