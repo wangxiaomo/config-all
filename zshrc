@@ -37,3 +37,9 @@ source $ZSH/oh-my-zsh.sh
 alias vi='vim'
 alias grep='grep -i'
 alias ls='ls -F --color'
+alias as='aptitude search'
+alias ai='sudo aptitude install'
+alias vpn='sudo /etc/init.d/openvpn start'
+
+export VISUAL='vim'
+export DISPLAY=:0.0
