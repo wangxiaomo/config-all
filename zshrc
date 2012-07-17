@@ -40,6 +40,8 @@ alias ls='ls -F --color'
 alias as='aptitude search'
 alias ai='sudo aptitude install'
 alias vpn='sudo /etc/init.d/openvpn start'
+alias python='python2.7'
+alias ipython='ipython2.7'
 
 export DISPLAY=:0.0
 export VISUAL='vim'
@@ -50,3 +52,5 @@ export LC_ALL='zh_CN.UTF-8'
 export XMODIFIERS="@im=ibus"
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
+
+bindkey -v
