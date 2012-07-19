@@ -42,6 +42,7 @@ alias ai='sudo aptitude install'
 alias vpn='sudo /etc/init.d/openvpn start'
 alias python='python2.7'
 alias ipython='ipython2.7'
+alias scrot="scrot -s '/home/xiaomo/images/%Y-%m-%d_%H:%M:%S.png'"
 
 export DISPLAY=:0.0
 export VISUAL='vim'
