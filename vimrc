@@ -41,15 +41,17 @@ endif
 " differently from regular Vi. They are highly recommended though.
 set showmode
 set showcmd         " Show (partial) command in status line.
-set ruler
 set showmatch		" Show matching brackets.
+
 set ignorecase		" Do case insensitive matching
 set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 set hlsearch
+
 set autowrite		" Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
 set mouse=a		" Enable mouse usage (all modes)
+set ruler
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -62,11 +64,13 @@ endif
 
 " xiaomo code here
 set shiftwidth=4
+set textwidth=79
 set autoindent
 set number
 set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
+
 imap <s-tab> <c-p>
 map <c-d> :tabclose<CR>
 
@@ -116,3 +120,10 @@ function Run_cnt_script()
   endif
   echohl WarningMsg | echo "Unrecognized Ext!" | echohl None
 endfunction
+
+"InsertPythonLocale
+map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
+
+"HighLight Line Length
+highlight rightMargin ctermfg=lightblue
+match rightMargin /.\%>79v/
