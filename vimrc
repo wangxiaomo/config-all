@@ -64,7 +64,6 @@ endif
 
 " xiaomo code here
 set shiftwidth=4
-set textwidth=79
 set autoindent
 set number
 set tabstop=4
