@@ -92,8 +92,8 @@ Bundle 'matchindent.vim'
 " Mark.vim
 map m \m
 " NerdTree
-map <c-f> :NERDTreeToggle<CR>
-imap <c-f> <ESC>:NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
+imap <F2> <ESC>:NERDTreeToggle<CR>
 " gsession.vim
 let g:autoload_session = 1
 let g:autosave_session = 1
