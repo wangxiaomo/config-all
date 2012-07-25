@@ -51,8 +51,12 @@ export EDITOR='vim'
 export LANG='zh_CN.UTF-8'
 export LANGUAGE='zh_CN.UTF-8'
 export LC_ALL='zh_CN.UTF-8'
-export XMODIFIERS="@im=ibus"
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
+export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 
 bindkey -v
+
+
+# Prompt
+PROMPT="${current_dir} ${git_branch}%B%%%b "
