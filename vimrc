@@ -50,8 +50,11 @@ set hlsearch
 
 set autowrite		" Automatically save before commands like :next and :make
 set hidden             " Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
 set ruler
+
+if has('mouse')
+  set mouse=a		" Enable mouse usage (all modes)
+endif
 
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
@@ -69,6 +72,7 @@ set number
 set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
+set backspace=indent,eol,start
 
 imap <s-tab> <c-p>
 map <c-d> :tabclose<CR>
