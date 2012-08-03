@@ -61,10 +61,6 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-if has("gui_runing")
-  colorscheme pablo
-endif
-
 " xiaomo code here
 set shiftwidth=4
 set autoindent
@@ -83,24 +79,16 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'bash-support.vim'
-Bundle 'perl-support.vim'
 " Python Import 插件.默认开启
 Bundle 'python-imports.vim'
 let g:PythonAutoAddImports = 1
-" NERDComments 插件.快捷键 c-c
-map <c-c> \c<SPACE>
-imap <c-c> <ESC>\c<SPACE>i
 " MatchIndent. 强制转化文件 indent 到指定 indent
 Bundle 'matchindent.vim'
 " Mark.vim
 map m \m
 " NerdTree
-map <F2> :NERDTreeToggle<CR>
-imap <F2> <ESC>:NERDTreeToggle<CR>
-" gsession.vim
-let g:autoload_session = 1
-let g:autosave_session = 1
+map <C-e> :NERDTreeToggle<CR>
+imap <C-e> <ESC>:NERDTreeToggle<CR>
 
 filetype plugin on
 
@@ -130,3 +118,21 @@ map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 "HighLight Line Length
 highlight rightMargin ctermfg=lightblue
 match rightMargin /.\%>79v/
+
+"colorscheme
+Bundle 'flazz/vim-colorschemes'
+
+Bundle 'Lokaltog/vim-powerline'
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+
+imap jj <ESC>
+Bundle 'spf13/vim-colors'
+
+Bundle 'Shougo/neocomplcache'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdcommenter'
+
+let mapleader=','
