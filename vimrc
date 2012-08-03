@@ -64,7 +64,7 @@ set t_Co=256
 
 " For vundle
 set nocompatible
-filetype on
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -101,3 +101,5 @@ endfunction
 " InsertPythonLocale
 map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 imap jj <ESC>
+
+filetype on
