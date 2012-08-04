@@ -4,7 +4,7 @@ if has("autocmd")
 endif
 
 if has('mouse')
-  set mouse=a		" Enable mouse usage (all modes)
+  set mouse=a
 endif
 
 
@@ -25,8 +25,6 @@ set hlsearch
 
 set autowrite
 set hidden
-
-set background=dark
 
 set number
 set shiftwidth=4
@@ -60,6 +58,11 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set encoding=utf-8
 set t_Co=256
+
+let g:indent_guides_auto_colors = 1
+hi IndentGuidesEven ctermbg=darkgrey
+hi IndentGuidesOdd  ctermbg=black 
+let g:indent_guides_guide_size=1
 
 
 " For vundle
@@ -103,3 +106,6 @@ map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 imap jj <ESC>
 
 filetype on
+colorscheme inkpot
+set background=dark
+
