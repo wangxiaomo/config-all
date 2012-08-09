@@ -37,6 +37,7 @@ source $ZSH/oh-my-zsh.sh
 alias vi='vim'
 alias grep='grep -i'
 alias ls='ls -F --color'
+alias ll='ls -lh'
 alias as='aptitude search'
 alias ai='sudo aptitude install'
 alias vpn='sudo /etc/init.d/openvpn start'
@@ -55,8 +56,9 @@ export XMODIFIERS="@im=fcitx"
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
-bindkey -v
-
+#bindkey -v
+bindkey -e
 
 # Prompt
 PROMPT="${current_dir} ${git_branch}%B%%%b "
+unsetopt correct_all
