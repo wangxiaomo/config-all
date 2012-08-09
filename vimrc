@@ -64,6 +64,21 @@ hi IndentGuidesEven ctermbg=darkgrey
 hi IndentGuidesOdd  ctermbg=black 
 let g:indent_guides_guide_size=1
 
+if executable('coffeetags')
+  let g:tagbar_type_coffee = {
+        \ 'ctagsbin' : 'coffeetags',
+        \ 'ctagsargs' : '',
+        \ 'kinds' : [
+        \ 'f:functions',
+        \ 'o:object',
+        \ ],
+        \ 'sro' : ".",
+        \ 'kind2scope' : {
+        \ 'f' : 'object',
+        \ 'o' : 'object',
+        \ }
+        \ }
+endif
 
 " For vundle
 set nocompatible
@@ -106,6 +121,6 @@ map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 imap jj <ESC>
 
 filetype on
-colorscheme inkpot
 set background=dark
-
+set cursorcolumn
+set cursorline
