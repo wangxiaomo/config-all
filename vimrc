@@ -34,13 +34,9 @@ set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
 
-" HighLight Line Length
-highlight rightMargin ctermfg=lightblue
-match rightMargin /.\%>79v/
-
 " key binding of vimrc
 imap <s-tab> <c-p>
-map  <c-d> :tabclose<CR>
+"map  <c-d> :tabclose<CR>
 
 " plugin config of vimrc
 let g:PythonAutoAddImports = 1
@@ -87,7 +83,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'python-imports.vim'
-Bundle 'matchindent.vim'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'spf13/vim-colors'
@@ -124,3 +119,5 @@ filetype on
 set background=dark
 set cursorcolumn
 set cursorline
+hi CursorColumn cterm=NONE ctermbg=black
+hi CursorLine cterm=NONE ctermbg=black
