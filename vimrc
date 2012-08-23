@@ -36,11 +36,11 @@ set backspace=indent,eol,start
 
 " key binding of vimrc
 imap <s-tab> <c-p>
-"map  <c-d> :tabclose<CR>
+" map  <c-d> :tabclose<CR>
 
 " plugin config of vimrc
 let g:PythonAutoAddImports = 1
-map m \m
+map m ,m
 
 filetype plugin on
 map  <leader>e :NERDTreeToggle<CR>
@@ -89,6 +89,7 @@ Bundle 'spf13/vim-colors'
 Bundle 'Shougo/neocomplcache'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'myusuf3/numbers.vim'
 
 " Other
 " F5 to run current script [ default is python ]
@@ -113,6 +114,7 @@ endfunction
 
 " InsertPythonLocale
 map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
+map <F7> <ESC>:set ft=html<CR>
 imap jj <ESC>
 
 filetype on
