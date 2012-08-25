@@ -2,11 +2,9 @@
 if has("autocmd")
  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-
 if has('mouse')
   set mouse=a
 endif
-
 
 " common config of vimrc
 let mapleader=','
@@ -34,13 +32,29 @@ set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
 
+set background=dark
+set cursorcolumn
+set cursorline
+hi CursorColumn cterm=NONE ctermbg=black
+hi CursorLine cterm=NONE ctermbg=black
+
 " key binding of vimrc
+imap jj <ESC>
 imap <s-tab> <c-p>
-" map  <c-d> :tabclose<CR>
+map  <leader>d :tabclose<CR>
+map  <leader>nm :NumbersToggle<CR>
+map  <leader>ps :'<,'>Gist -P<CR>
+map  <leader>pa :Gist -P<CR>
+map  <leader>pp :Gist -p<CR>
+map  <F5> :call Run_cnt_script()<CR>
+map  <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
+map  <F7> <ESC>:set ft=html<CR>
 
 " plugin config of vimrc
 let g:PythonAutoAddImports = 1
-map m ,m
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+let g:gist_detect_filetype = 1
+" after u should set git user by git config --global github.user xiaomo
 
 filetype plugin on
 map  <leader>e :NERDTreeToggle<CR>
@@ -82,18 +96,19 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+Bundle 'Gist.vim'
 Bundle 'python-imports.vim'
-Bundle 'flazz/vim-colorschemes'
+Bundle 'vim-coffee-script'
+Bundle 'tips.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'spf13/vim-colors'
 Bundle 'Shougo/neocomplcache'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'mattn/webapi-vim'
 
 " Other
 " F5 to run current script [ default is python ]
-nmap <F5> :call Run_cnt_script()<CR>
 function Run_cnt_script()
   let script_name = expand("%")
   let script_ext  = expand("%:e")
@@ -112,14 +127,4 @@ function Run_cnt_script()
   echohl WarningMsg | echo "Unrecognized Ext!" | echohl None
 endfunction
 
-" InsertPythonLocale
-map <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
-map <F7> <ESC>:set ft=html<CR>
-imap jj <ESC>
-
-filetype on
-set background=dark
-set cursorcolumn
-set cursorline
-hi CursorColumn cterm=NONE ctermbg=black
-hi CursorLine cterm=NONE ctermbg=black
+filetype on " Make Bundle Happy
