@@ -49,16 +49,14 @@ alias tmux="tmux attach || tmux"
 export DISPLAY=:0.0
 export VISUAL='vim'
 export EDITOR='vim'
-export LANG='zh_CN.UTF-8'
-export LANGUAGE='zh_CN.UTF-8'
-export LC_ALL='zh_CN.UTF-8'
-export XMODIFIERS="@im=fcitx"
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
 
 #bindkey -v
 bindkey -e
 
 # Prompt
-PROMPT="${current_dir} ${git_branch}%B%%%b "
+PROMPT="${current_dir} ${git_branch} (%m) %B%%%b "
+
 unsetopt correct_all
+
+# doubandev2
+alias log='svn log -v --stop-on-copy http://svn.douban.com/svn/shire/branches/qingfeng/parttime/wj/'
