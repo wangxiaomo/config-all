@@ -105,6 +105,8 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Gist.vim'
+Bundle 'mako.vim'
+Bundle 'mako.vim--Torborg'
 Bundle 'python-imports.vim'
 Bundle 'vim-coffee-script'
 Bundle 'Lokaltog/vim-powerline'
