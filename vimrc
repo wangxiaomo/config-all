@@ -46,6 +46,7 @@ map  <leader>nm :NumbersToggle<CR>
 map  <leader>ps :'<,'>Gist -P<CR>
 map  <leader>pa :Gist -P<CR>
 map  <leader>pp :Gist -p<CR>
+map  <leader>s  :SyntasticCheck<CR>
 map  <F5> :call Run_cnt_script()<CR>
 map  <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 map  <F7> <ESC>:set ft=html<CR>
@@ -55,6 +56,13 @@ let g:PythonAutoAddImports = 1
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 let g:gist_detect_filetype = 1
 " after u should set git user by git config --global github.user xiaomo
+let g:syntastic_check_on_open=1
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_enable_balloons = 1
+let g:syntastic_enable_highlighting = 0
 
 filetype plugin on
 map  <leader>e :NERDTreeToggle<CR>
@@ -99,8 +107,8 @@ Bundle 'gmarik/vundle'
 Bundle 'Gist.vim'
 Bundle 'python-imports.vim'
 Bundle 'vim-coffee-script'
-Bundle 'tips.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/neocomplcache'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
