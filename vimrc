@@ -31,12 +31,12 @@ set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
-
+colorscheme pablo
 set background=dark
-set cursorcolumn
-set cursorline
-hi CursorColumn cterm=NONE ctermbg=black
-hi CursorLine cterm=NONE ctermbg=black
+"set cursorcolumn
+"set cursorline
+"hi CursorColumn cterm=NONE ctermbg=black
+"hi CursorLine cterm=NONE ctermbg=black
 
 " key binding of vimrc
 imap jj <ESC>
