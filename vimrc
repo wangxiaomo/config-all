@@ -31,7 +31,7 @@ set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
-colorscheme jellybeans
+colorscheme molokai
 set background=dark
 set cursorcolumn
 set cursorline
