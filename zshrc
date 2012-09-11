@@ -43,20 +43,23 @@ alias ai='sudo aptitude install'
 alias vpn='sudo /etc/init.d/openvpn start'
 alias python='python2.7'
 alias ipython='ipython2.7'
-alias scrot="scrot -s '/home/xiaomo/images/%Y-%m-%d_%H:%M:%S.png'"
-alias tmux="tmux attach || tmux"
+alias tmux="TERM=screen-256color-bce tmux"
+alias doubandev2="ssh wj_intern@doubandev2.intra.douban.com"
+alias dev2=doubandev2
 
 export DISPLAY=:0.0
 export VISUAL='vim'
 export EDITOR='vim'
+export LANG='zh_CN.UTF-8'
+export LANGUAGE='zh_CN.UTF-8'
+export LC_ALL='zh_CN.UTF-8'
+export XMODIFIERS="@im=ibus"
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
 
 #bindkey -v
 bindkey -e
 
 # Prompt
-PROMPT="${current_dir} ${git_branch} (%m) %B%%%b "
-
+PROMPT="${current_dir} ${git_branch}%B%%%b "
 unsetopt correct_all
-
-# doubandev2
-alias log='svn log -v --stop-on-copy http://svn.douban.com/svn/shire/branches/qingfeng/parttime/wj/'
