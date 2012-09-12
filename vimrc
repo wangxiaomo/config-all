@@ -40,13 +40,17 @@ hi CursorLine cterm=NONE ctermbg=black
 " key binding of vimrc
 imap jj <ESC>
 imap <s-tab> <c-p>
-map  <leader>d :tabclose<CR>
+imap <c-w>n    :tabnew<CR>
+map  <c-w>n    :tabnew<CR>
+map  <leader>1 :tabn 1<CR>
+map  <leader>2 :tabn 2<CR>
+map  <leader>3 :tabn 3<CR>
+map  <leader>4 :tabn 4<CR>
 map  <leader>nm :NumbersToggle<CR>
 map  <leader>ps :'<,'>Gist -P<CR>
 map  <leader>pa :Gist -P<CR>
 map  <leader>pp :Gist -p<CR>
 map  <leader>s  :SyntasticCheck<CR>
-map  <F5> :call Run_cnt_script()<CR>
 map  <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
 map  <F7> <ESC>:set ft=html<CR>
 
@@ -115,26 +119,6 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mattn/webapi-vim'
-
-" Other
-" F5 to run current script [ default is python ]
-function Run_cnt_script()
-  let script_name = expand("%")
-  let script_ext  = expand("%:e")
-  if (script_name == '')
-    echohl WarningMsg | echo "Fail to Run." | echohl None
-    return
-  endif
-  if (script_ext == 'py')
-    execute "!python " . script_name
-    return
-  endif
-  if (script_ext == 'pl')
-    execute "!perl " . script_name
-    return
-  endif
-  echohl WarningMsg | echo "Unrecognized Ext!" | echohl None
-endfunction
 
 filetype on " Make Bundle Happy
 colorscheme molokai
