@@ -31,7 +31,6 @@ set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
-colorscheme molokai
 set background=dark
 set cursorcolumn
 set cursorline
@@ -138,6 +137,7 @@ function Run_cnt_script()
 endfunction
 
 filetype on " Make Bundle Happy
+colorscheme molokai
 
 autocmd FileType python,perl set sw=4
 autocmd FileType python,perl set ts=4
