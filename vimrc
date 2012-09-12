@@ -138,3 +138,8 @@ function Run_cnt_script()
 endfunction
 
 filetype on " Make Bundle Happy
+
+autocmd FileType python,perl set sw=4
+autocmd FileType python,perl set ts=4
+autocmd FileType javascript,html,markdown set sw=2
+autocmd FileType javascript,html,markdown set ts=2
