@@ -65,7 +65,10 @@ let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_balloons = 1
+let g:ctrlp_use_caching = 1
+let g:ctrlp_working_path_mode = 0
 let g:syntastic_enable_highlighting = 0
+let g:jinja_syntax_html = 1
 
 filetype plugin on
 map  <leader>e :NERDTreeToggle<CR>
@@ -108,6 +111,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Gist.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
 Bundle 'python-imports.vim'
@@ -119,6 +123,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mattn/webapi-vim'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 
 filetype on " Make Bundle Happy
 colorscheme molokai
