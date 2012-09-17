@@ -31,11 +31,6 @@ set tabstop=4
 set expandtab
 set fencs=utf-8,cp936
 set backspace=indent,eol,start
-set background=dark
-set cursorcolumn
-set cursorline
-hi CursorColumn cterm=NONE ctermbg=black
-hi CursorLine cterm=NONE ctermbg=black
 
 " key binding of vimrc
 imap jj <ESC>
@@ -47,18 +42,19 @@ map  <leader>2 :tabn 2<CR>
 map  <leader>3 :tabn 3<CR>
 map  <leader>4 :tabn 4<CR>
 map  <leader>nm :NumbersToggle<CR>
-map  <leader>ps :'<,'>Gist -P<CR>
-map  <leader>pa :Gist -P<CR>
-map  <leader>pp :Gist -p<CR>
-map  <leader>s  :SyntasticCheck<CR>
-map  <F6> gga#-*- coding: utf-8 -*-<CR><ESC>
-map  <F7> <ESC>:set ft=html<CR>
 
 " plugin config of vimrc
 let g:PythonAutoAddImports = 1
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-let g:gist_detect_filetype = 1
-" after u should set git user by git config --global github.user xiaomo
+let NERDChristmasTree=0
+let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc', '\.swp$']
+let NERDTreeSortOrder=['^__\.py', '\/$', '*', '\.swp$', '\~$']
+let NERDTreeShowBookmarks=1
+let g:user_zen_expandabbr_key='<C-j>'
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_smart_case=1
+let g:neocomplcache_min_syntax_length=2
+let g:neocomplcache_lock_buffer_name_pattern='\*ku\*'
 let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
@@ -110,7 +106,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'Gist.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mako.vim'
 Bundle 'mako.vim--Torborg'
@@ -124,11 +119,14 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'ervandew/supertab'
+Bundle 'mattn/zencoding-vim'
 
 filetype on " Make Bundle Happy
-colorscheme molokai
 
 autocmd FileType python,perl set sw=4
 autocmd FileType python,perl set ts=4
 autocmd FileType javascript,html,markdown set sw=2
 autocmd FileType javascript,html,markdown set ts=2
+
+set background=dark
