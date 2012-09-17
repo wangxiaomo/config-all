@@ -67,6 +67,7 @@ let g:syntastic_enable_highlighting = 0
 let g:jinja_syntax_html = 1
 
 filetype plugin on
+imap ` <ESC>
 map  <leader>e :NERDTreeToggle<CR>
 imap <leader>e :NERDTreeToggle<CR>
 map  <C-e> :NERDTreeToggle<CR>
@@ -130,3 +131,4 @@ autocmd FileType javascript,html,markdown set sw=2
 autocmd FileType javascript,html,markdown set ts=2
 
 set background=dark
+colorscheme molokai
